@@ -1,12 +1,12 @@
 import ArrowLeft from "../svg/arrowleft";
 import DollarSvg from "../svg/dollar";
 
-export default function HomePriviewProducts({title}:{title:string}){
+export default function HomePriviewProducts({title,svg}:{title:string,svg:React.ReactNode}){
     return(
         <div className=" border-t-2 my-5 border-b-2 mx-20 py-5">
             <div className="flex justify-between  ">
 <div className="flex items-center">
-   <div><DollarSvg/></div> 
+   <div>{svg}</div> 
    <div className="font-bold text-lg text-primarydarkgray mr-1">{title}</div> </div>
    <div className="flex items-center text-primarygreen2">
     <p className="ml-1">نمایش همه</p>

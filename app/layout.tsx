@@ -29,10 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased ${RokhFont.className}`}
       >
         <Header />
-        <main >
+        <main className="my-10">
           {children}
         </main>
         <Footer />

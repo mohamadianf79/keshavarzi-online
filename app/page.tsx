@@ -11,37 +11,38 @@ import HomeBanner from "./component/homeComponent/homebanner";
 import HomeAbout from "./component/homeComponent/homeabout";
 import HomeBlog from "./component/homeComponent/homeblog";
 import Layout from "./layout";
+import LikeSvg from "./component/svg/like";
+import DollarSvg from "./component/svg/dollar";
+import HomeFirstBanner from "./component/homeComponent/homefirstbanner";
 
 export default function Home() {
-  return (<div>
-    <Layout>
-      <div className={`${RokhFont.className}`}>
-        <div className="w-full flex justify-center my-5">
-          <img src="/pic/Group 1261153156.png" alt="" />
-        </div>
-        <HomeCategory />
-        <div className="mx-20"><HomeFestival /></div>
-        <div><HomeTwinBanner /></div>
-        <div>
-          <HomePriviewProducts title="پرفروش‌ترین محصولات" />
-        </div>
-        <div>
-          <HomeBanner />
-        </div>
-        <div>
-          <HomePriviewProducts title='محبوب‌ترین محصولات' />
-        </div>
-        <div><HomeTwinBanner /></div>
-        <div>
-          <HomePriviewProducts title=' جدید‌ترین محصولات' />
-        </div>
-        <div>
-          <HomeAbout />
-        </div>
-        <div>
-          <HomeBlog />
-        </div>
-      </div></Layout>
+  return (
+    <div className={`${RokhFont.className}`}>
+     <HomeFirstBanner/>
+      <HomeCategory />
+      <div className="mx-20"><HomeFestival /></div>
+      <div><HomeTwinBanner /></div>
+      <div>
+        <HomePriviewProducts svg={<DollarSvg />} title="پرفروش‌ترین محصولات" />
+      </div>
+      <div>
+        <HomeBanner />
+      </div>
+      <div>
 
-  </div>);
+        <HomePriviewProducts svg={<LikeSvg className="w-5 h-5"/>} title='محبوب‌ترین محصولات' />
+      </div>
+      <div><HomeTwinBanner /></div>
+      <div>
+        <HomePriviewProducts svg={<DollarSvg />} title=' جدید‌ترین محصولات' />
+      </div>
+      <div>
+        <HomeAbout />
+      </div>
+      <div>
+        <HomeBlog />
+      </div>
+    </div>
+
+  );
 }

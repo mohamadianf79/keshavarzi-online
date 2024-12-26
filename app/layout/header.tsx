@@ -7,6 +7,7 @@ import HomeSvg from "../component/svg/home"
 import SearchSvg from "../component/svg/search"
 import ShopSvg from "../component/svg/shop"
 import ArrowDownSvg from "../component/svg/arrowdown"
+import Link from "next/link"
 
 
 export default function Header() {
@@ -27,9 +28,9 @@ export default function Header() {
                         <div className="border-l border-primarygray1 px-2 ">ورود</div>
                         <div className="px-2">ثبت‌نام</div>
                     </div>
-                    <div className="text-primarytextgray border border-primarygray1 rounded-xl mr-5 p-4 w-14 h-14">
+                  <Link href='/checkout/cart'>  <div className="text-primarytextgray border border-primarygray1 rounded-xl mr-5 p-4 w-14 h-14">
                         <ShopSvg />
-                    </div>
+                    </div></Link>
                 </div>
             </div>
             <div className="flex text-primarytextgray my-2">
